@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered GIF</title>
+    <style>
+        /* Full-screen white background like iPhone */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #FFFFFF; /* iPhone white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Optional: make the GIF responsive */
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://static.wixstatic.com/media/68315b_30dbad1140034a3da3c59278654e1655~mv2.gif" alt="Centered GIF">
+</body>
+</html>
