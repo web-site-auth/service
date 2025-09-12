@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered GIF</title>
-    <style>
-        /* Full-screen white background like iPhone */
-        body {
-            margin: 0;
-            height: 100vh;
-            background-color: #FFFFFF; /* iPhone white */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Optional: make the GIF responsive */
-        img {
-            max-width: 80%;
-            height: auto;
-        }
-    </style>
+    <title>DNS Exit Links</title>
 </head>
-<body>
-    <img src="https://static.wixstatic.com/media/68315b_30dbad1140034a3da3c59278654e1655~mv2.gif" alt="Centered GIF">
+<body style="background-color:#FFFFFF; font-family: Arial, sans-serif; color:#000000;">
+
+    <!-- GIFs linked to DNSExit -->
+    <a href="http://dnsexit.com">
+        <img src="http://dnsexit.com/images/dns.gif" border="0" alt="DNSExit GIF">
+    </a>
+    <a href="http://dnsexit.com">
+        <img src="http://dnsexit.com/images/dns2.gif" border="0" alt="DNSExit GIF 2">
+    </a>
+
+    <br><br>
+
+    <!-- Text links -->
+    <p>
+        DNS Powered by 
+        <font color="#006699"><a href="http://www.dnsExit.com" style="text-decoration:none; color:#006699;">DNS</a></font>
+        <a href="http://www.dnsExit.com" style="text-decoration:none;"><font color="#FF6600">EXIT</font>.COM</a>
+    </p>
+
+    <p>
+        <font color="#006699"><a href="http://www.dnsExit.com" style="text-decoration:none; color:#006699;">DNS</a></font>
+        <a href="http://www.dnsExit.com" style="text-decoration:none;"><font color="#FF6600">EXIT</font>.COM</a> 
+        - Move your website home through DSL/Cable Modem/Dial-Up connections.
+    </p>
+
+    <p>
+        <font color="#006699"><a href="http://www.dnsExit.com" style="text-decoration:none; color:#006699;">DNS</a></font>
+        <a href="http://www.dnsExit.com" style="text-decoration:none;"><font color="#FF6600">EXIT</font>.COM</a> 
+        - Free Dynamic, Static DNS Services.
+    </p>
+
 </body>
 </html>
