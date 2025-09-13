@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checking your browser...</title>
+<title>Redirecting...</title>
 <style>
     body {
         margin: 0;
@@ -16,16 +16,33 @@
         background-color: #f0f0f0;
         color: #333;
     }
-    .loading-gif {
+
+    /* Circle loader */
+    .loader {
+        border: 10px solid #f3f3f3; /* Light grey */
+        border-top: 10px solid #3498db; /* Blue */
+        border-radius: 50%;
         width: 100px;
         height: 100px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 </style>
+<script>
+    // Redirect after 3 seconds
+    setTimeout(() => {
+        window.location.href = "https://www.google.com";
+    }, 3000);
+</script>
 </head>
 <body>
-    <!-- Centered loading GIF -->
-    <img src="https://i.gifer.com/YCZH.gif" alt="Checking..." class="loading-gif">
-    <p>Checking your browser, please wait...</p>
+    <!-- Centered circle loader -->
+    <div class="loader"></div>
+    <p>Redirecting, please wait...</p>
 
     <!-- Hidden DNSExit ads -->
     <div style="position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;">
