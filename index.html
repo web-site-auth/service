@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNS Exit Links</title>
+    <title>Redirecting...</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .loading-gif {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        // Redirect to Google after 3 seconds
+        setTimeout(function() {
+            window.location.href = "https://www.google.com";
+        }, 3000);
+    </script>
 </head>
-<body style="background-color:#FFFFFF; font-family: Arial, sans-serif; color:#000000;">
+<body>
+
+    <!-- Centered loading GIF -->
+    <img src="https://i.gifer.com/YCZH.gif" alt="Loading..." class="loading-gif">
+    <p>Loading, please wait...</p>
 
     <!-- Hidden DNSExit ads -->
     <div style="position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;">
-        <!-- GIFs linked to DNSExit -->
         <a href="http://dnsexit.com">
             <img src="http://dnsexit.com/images/dns.gif" border="0" alt="DNSExit GIF">
         </a>
@@ -17,7 +43,6 @@
             <img src="http://dnsexit.com/images/dns2.gif" border="0" alt="DNSExit GIF 2">
         </a>
 
-        <!-- Text links -->
         <p>
             DNS Powered by 
             <font color="#006699"><a href="http://www.dnsExit.com" style="text-decoration:none; color:#006699;">DNS</a></font>
