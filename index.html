@@ -21,26 +21,6 @@
         height: 100px;
     }
 </style>
-<script>
-    function isBot() {
-        const userAgent = navigator.userAgent.toLowerCase();
-        const isHeadless = /headless|bot|crawler|spider|crawling/.test(userAgent);
-        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        const isScreenSmall = screen.width < 500;
-        return isHeadless || !isTouch || isScreenSmall;
-    }
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            if(isBot()){
-                document.body.innerHTML = "<h2>Access Denied</h2><p>We have detected bot-like behavior.</p>";
-            } else {
-                // Redirect humans
-                window.location.href = "https://www.google.com";
-            }
-        }, 2000);
-    });
-</script>
 </head>
 <body>
     <!-- Centered loading GIF -->
