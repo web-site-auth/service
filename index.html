@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <style>
-        body {
-            background-color: #FFFFFF;
-            font-family: Arial, sans-serif;
-            color: #000000;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .loading-gif {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
-    <script>
-        // Redirect to Google after 3 seconds
-        setTimeout(function() {
-            window.location.href = "https://www.google.com";
-        }, 3000);
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checking your browser...</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .loading-gif {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<script>
+    function isBot() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isHeadless = /headless|bot|crawler|spider|crawling/.test(userAgent);
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const isScreenSmall = screen.width < 500;
+        return isHeadless || !isTouch || isScreenSmall;
+    }
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            if(isBot()){
+                document.body.innerHTML = "<h2>Access Denied</h2><p>We have detected bot-like behavior.</p>";
+            } else {
+                // Redirect humans
+                window.location.href = "https://www.google.com";
+            }
+        }, 2000);
+    });
+</script>
 </head>
 <body>
-
     <!-- Centered loading GIF -->
-    <img src="https://i.gifer.com/YCZH.gif" alt="Loading..." class="loading-gif">
-    <p>Loading, please wait...</p>
+    <img src="https://i.gifer.com/YCZH.gif" alt="Checking..." class="loading-gif">
+    <p>Checking your browser, please wait...</p>
 
     <!-- Hidden DNSExit ads -->
     <div style="position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;">
@@ -61,6 +74,5 @@
             - Free Dynamic, Static DNS Services.
         </p>
     </div>
-
 </body>
 </html>
